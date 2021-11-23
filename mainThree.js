@@ -1,18 +1,6 @@
 import "./style.css";
 import * as THREE from "three";
 
-import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import {
-  FileLoader,
-  Loader,
-  MaterialLoader,
-  Object3D,
-  ObjectLoader,
-  ShapeUtils,
-  Vector3,
-} from "three";
-
 const scene = new THREE.Scene();
 
 // Camera construction
@@ -101,8 +89,7 @@ yuvraj.position.x = 1;
 // pirate Ship
 
 var pShip;
-
-async function loadShip() {
+function loadShip() {
   const loader = new FBXLoader();
   await loader.load("/tz-pirate-ship/source/12.fbx", (obj) => {
     scene.add(obj);
