@@ -115,7 +115,7 @@ async function loadShip() {
     pShip = obj;
   });
 }
-await loadShip();
+loadShip();
 
 // camera move on Scroll
 function moveCamera() {
