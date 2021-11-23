@@ -5,18 +5,6 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yuvraj's Website</title>
-    <script type="module" src="/jquery-3.6.0.min.js"></script>
-    <script type="module" src="/index.js"></script>
-    <script type="module" src="/Dtext.js"></script>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      defer
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
   </head>
 
   <body>
@@ -69,7 +57,7 @@
             target="_blank"
             href=" https://github.com/yuvrajbajwa10/Compsci235Asignment"
           >
-            https://github.com/yuvrajbajwa10/Compsci235Asignment</a
+            github.com/yuvrajbajwa10/Compsci235Asignment</a
           ><br />
           A webapp made using flask for backend, jinja frontend, and SQL alchemy
           as the database interface language. Jinja is a templating engine. So,
@@ -187,14 +175,20 @@
           Email:
           <a href="mailto:yuvrajbajwa8@gmail.com">yuvrajbajwa8@gmail.com</a
           ><span id="email">
-            <button onclick="copyToClipboard('yuvrajbajwa8@gmail.com','email')">
+            <button
+              id="emailButton"
+              onclick="copyToClipboard('yuvrajbajwa8@gmail.com','email')"
+            >
               <ion-icon name="clipboard-outline"></ion-icon>
             </button>
           </span>
           <br />
           Phone: <a href="tel:+0640211273471">064 021 127 3471</a
           ><span id="phoneNumber">
-            <button onclick="copyToClipboard('0640211273471','phoneNumber')">
+            <button
+              id="phoneNumberButton"
+              onclick="copyToClipboard('0640211273471','phoneNumber')"
+            >
               <ion-icon name="clipboard-outline"></ion-icon></button
           ></span>
         </p>
@@ -250,6 +244,21 @@
         </p>
       </section>
     </main>
-    <script type="module" src="/mainThree.js"></script>
+    <script defer type="module" src="/mainThree.js"></script>
+    <script src="/index.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      defer
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      defer
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <script defer type="module" src="/Dtext.js"></script>
   </body>
 </html>

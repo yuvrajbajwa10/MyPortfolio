@@ -10,8 +10,10 @@ function alertModal(AlertText, elementRef) {
   const newContent = document.createTextNode(AlertText);
   newPopup.appendChild(newContent);
   const elementToAddTo = document.getElementById(elementRef);
-  elementToAddTo.parentNode.insertBefore(newPopup, elementToAddTo);
+  elementToAddTo.parentNode.insertBefore(newPopup, elementToAddTo.nextSibling);
+  $("#" + elementRef + "Button").attr("disabled", "true");
   setTimeout(() => {
     elementToAddTo.parentNode.removeChild(newPopup);
+    $("#" + elementRef + "Button").removeAttr("disabled");
   }, 2000);
 }
