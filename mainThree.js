@@ -106,9 +106,7 @@ async function loadShip() {
   const loader = new FBXLoader();
   await loader.load("/tz-pirate-ship/source/12.fbx", (obj) => {
     scene.add(obj);
-    pShip = scene.getObjectById(218);
-
-    obj.scale.set(0.1, 0.1, 0.1);
+    obj.scale.set(0.0000001, 0.0000001, 0.0000001);
     obj.position.set(-80, -45, -50);
     // the rotation must be in radians so I have multiplied degrees by the Rad conversion Multiplier
     obj.rotation.set(90 * 0.0174533, 0 * 0.0174533, -130 * 0.0174533);
@@ -131,9 +129,15 @@ function moveCamera() {
   camera.position.z = t * -0.01;
   camera.position.x = t * -0.0002;
   camera.rotation.y = t * -0.0002;
+
   if (pShip) {
     pShip.rotation.z = t * -0.002;
     pShip.position.y += -0.0001;
+    if (pShip.scale.x < 0.05) {
+      pShip.scale.x += 0.00009;
+      pShip.scale.y += 0.00009;
+      pShip.scale.z += 0.00009;
+    }
   }
 }
 

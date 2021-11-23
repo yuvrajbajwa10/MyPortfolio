@@ -1,4 +1,3 @@
-import jQuery from "jquery";
 import $ from "jquery";
 
 const carouselText = [
