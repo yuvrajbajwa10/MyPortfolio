@@ -1,3 +1,5 @@
+import $ from "jquery";
+
 const carouselText = [
   { text: "User Experiences.", color: "#ff6347" },
   { text: "User Interfaces.", color: "#FFBF47" },
