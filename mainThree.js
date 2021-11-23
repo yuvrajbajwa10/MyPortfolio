@@ -121,7 +121,11 @@ function moveCamera() {
   /*   moon.rotation.x += 0.05;
   moon.rotation.y += 0.075;
   moon.rotation.z += 0.05; */
-
+  if (torus.scale.x > 0) {
+    torus.scale.x += -0.009;
+    torus.scale.y += -0.009;
+    torus.scale.z += -0.009;
+  }
   yuvraj.rotation.y += 0.01;
   yuvraj.rotation.z += 0.01;
 
