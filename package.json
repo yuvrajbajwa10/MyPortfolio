@@ -7,6 +7,9 @@
     "serve": "vite preview"
   },
   "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
     "vite": "^2.6.4"
   },
   "dependencies": {
