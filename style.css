@@ -48,7 +48,7 @@ main {
 .input-cursor {
   display: inline-block;
   width: 2px;
-  height: 8vw;
+  height: 3vw;
   position: relative;
   top: 10px;
   background-color: black;
@@ -77,9 +77,15 @@ header {
   background: var(--dark-bg);
   grid-column: 2 / span 5;
   padding: 2rem;
+
   margin-bottom: var(--spacing);
 }
-
+header h1 {
+  font-size: 8vw;
+}
+header p {
+  font-size: 2vw;
+}
 section {
   grid-column: 2 / 8;
   padding: 1rem;
@@ -115,7 +121,7 @@ blockquote p {
 }
 .typingText p,
 .typingText span {
-  font-size: 8vw;
+  font-size: 3vw;
 }
 .sj {
   align-self: flex-end;
@@ -124,6 +130,7 @@ blockquote p {
 }
 .quote {
   flex: 1;
+  font-size: 4vw;
 }
 .light {
   grid-column: 6 / 12;
@@ -157,7 +164,7 @@ h5 {
 }
 .about,
 .contactMe {
-  margin-bottom: 10vh;
+  margin-bottom: var(--spacing);
 }
 .about p,
 .abPage p {
@@ -190,7 +197,7 @@ h5 {
 
 .education {
   grid-column: 6/12;
-  margin-bottom: 10vh;
+  margin-bottom: var(--spacing);
 }
 
 #MessageF {
