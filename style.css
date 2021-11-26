@@ -18,6 +18,14 @@ canvas {
 #Dtext {
   color: black;
 }
+a {
+  color: #ff6347;
+  overflow-wrap: break-word;
+}
+
+a:hover {
+  color: aqua;
+}
 main {
   width: 100vw;
   color: white;
@@ -138,16 +146,7 @@ blockquote p {
 .contactMe {
   grid-column: 6 / 12;
 }
-.light a,
-.contactMe a {
-  color: #ff6347;
-  overflow-wrap: break-word;
-}
 
-.light a:hover,
-.contactMe a:hover {
-  color: aqua;
-}
 h3,
 h4,
 h5 {
