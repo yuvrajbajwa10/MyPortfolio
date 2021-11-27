@@ -146,7 +146,9 @@ blockquote p {
 .contactMe {
   grid-column: 6 / 12;
 }
-
+.qlook {
+  margin-left: 20px;
+}
 h3,
 h4,
 h5 {
