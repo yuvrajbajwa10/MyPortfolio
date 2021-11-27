@@ -135,6 +135,10 @@ blockquote p {
   align-self: flex-end;
   justify-content: right;
   text-align: right;
+  padding-left: 40px;
+}
+.SectionHeading {
+  display: inline-block;
 }
 .quote {
   flex: 1;
