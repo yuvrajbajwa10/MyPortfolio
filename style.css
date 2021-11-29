@@ -214,7 +214,16 @@ h5 {
   width: 100px;
   align-self: flex-end;
   margin-top: 10px;
+  border-radius: 5px;
+  background-color: #ff6347;
+  border-color: black;
 }
+
+#SubmitBttn:hover {
+  background-color: aqua;
+  font-weight: bold;
+}
+
 #EmailForm {
   display: flex;
   flex-direction: column;
