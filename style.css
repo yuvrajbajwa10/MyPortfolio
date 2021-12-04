@@ -5,7 +5,9 @@ canvas {
   top: 0;
   left: 0;
 }
-
+body {
+  margin: 0 0;
+}
 :root {
   --dark-bg: rgba(15, 15, 15, 0.95);
   --light-bg: rgba(255, 255, 255, 0.95);
@@ -22,12 +24,14 @@ canvas {
 #Dtext {
   color: black;
 }
-a {
+a,
+.comingSoon {
   color: #ff6347;
   overflow-wrap: break-word;
 }
 
-a:hover {
+a:hover,
+.comingSoon:hover {
   color: aqua;
 }
 main {
