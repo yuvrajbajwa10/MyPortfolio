@@ -6,7 +6,7 @@ Employers could see all details and find links to LinkedIn/ Github.
 I have added many ways to contact me on the website, such as a contact me form. 
 
 
-#In the future, I want to add :
+# In the future, I want to add :
 
 personal blog sections to the website,
 navigation tools such as a floating navigation bar (since the Page is getting pretty Big), 
