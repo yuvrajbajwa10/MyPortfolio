@@ -2,16 +2,6 @@ import "./style.css";
 import * as THREE from "three";
 
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import {
-  FileLoader,
-  Loader,
-  MaterialLoader,
-  Object3D,
-  ObjectLoader,
-  ShapeUtils,
-  Vector3,
-} from "three";
 
 const scene = new THREE.Scene();
 
@@ -102,9 +92,9 @@ yuvraj.position.x = 1;
 
 var pShip;
 
-async function loadShip() {
+function loadShip() {
   const loader = new FBXLoader();
-  await loader.load("/tz-pirate-ship/source/12.fbx", (obj) => {
+  loader.load("/tz-pirate-ship/source/12.fbx", (obj) => {
     scene.add(obj);
     obj.scale.set(0.0000001, 0.0000001, 0.0000001);
     obj.position.set(-80, -45, -50);
@@ -125,7 +115,11 @@ function moveCamera() {
     torus.scale.x += -0.009;
     torus.scale.y += -0.009;
     torus.scale.z += -0.009;
+    if (torus.scale.x <= 0.008) {
+      scene.remove(torus);
+    }
   }
+
   yuvraj.rotation.y += 0.01;
   yuvraj.rotation.z += 0.01;
 

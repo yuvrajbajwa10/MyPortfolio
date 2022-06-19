@@ -26,17 +26,16 @@ body {
 }
 a,
 .comingSoon {
-  color: #ff6347;
+  color: #6e0000;
   overflow-wrap: break-word;
 }
 
 a:hover,
 .comingSoon:hover {
-  color: aqua;
+  color: blue;
 }
 main {
   width: 100vw;
-  color: white;
   z-index: 99;
   position: absolute;
   width: 100%;
@@ -71,13 +70,8 @@ main {
 p {
   margin-top: 0;
 }
-h1,
-h2,
-h3,
-blockquote {
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 700;
-  font-style: normal;
+html {
+  font-family: "Roboto", sans-serif;
 }
 
 canvas {
@@ -86,10 +80,10 @@ canvas {
   left: 0;
 }
 header {
-  background: var(--dark-bg);
+  background: var(--light-bg);
   grid-column: 2 / span 5;
   padding: 2em;
-
+  color: black;
   margin-bottom: var(--spacing);
 }
 header h1 {
@@ -101,11 +95,12 @@ header p {
 section {
   grid-column: 2 / 8;
   padding: 1em;
-  background: var(--dark-bg);
+  background: var(--light-bg);
   font-size: var(--fontSize);
   line-height: 1.5;
   margin-bottom: var(--spacing);
   overflow-wrap: break-word;
+  color: black;
 }
 
 blockquote {
@@ -123,6 +118,11 @@ blockquote p {
   display: inline;
   line-height: 1;
 }
+.DQuote2,
+.DQuote3 {
+  padding-left: 20px;
+}
+
 #feature-text {
   padding-left: 5px;
 }
@@ -140,6 +140,7 @@ blockquote p {
   justify-content: right;
   text-align: right;
   padding-left: 40px;
+  color: black;
 }
 .SectionHeading {
   display: inline-block;
@@ -147,6 +148,7 @@ blockquote p {
 .quote {
   flex: 1;
   font-size: var(--headingSize);
+  font-style: italic;
 }
 .light {
   grid-column: 6 / 12;

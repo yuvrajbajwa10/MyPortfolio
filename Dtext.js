@@ -6,7 +6,73 @@ const carouselText = [
   { text: "Web apps.", color: "#FF4787" },
 ];
 
+const typingTitleText = [
+  {
+    elementTag: "h2.SectionHeading.PM",
+    text: "Personal Mission",
+    notloaded: true,
+    speed: 100,
+  },
+  {
+    elementTag: "h2.SectionHeading.EX",
+    text: "Work Experience",
+    notloaded: true,
+    speed: 100,
+  },
+  {
+    elementTag: "h2.SectionHeading.PS",
+    text: "Personal Skills",
+    notloaded: true,
+    speed: 100,
+  },
+  {
+    elementTag: "h2.SectionHeading.AM",
+    text: "About Me",
+    notloaded: true,
+    speed: 100,
+  },
+  {
+    elementTag: "h2.SectionHeading.P",
+    text: "Projects",
+    notloaded: true,
+    speed: 100,
+  },
+  {
+    elementTag: "h2.SectionHeading.E",
+    text: "Education",
+    notloaded: true,
+    speed: 100,
+  },
+  {
+    elementTag: "h2.SectionHeading.CM",
+    text: "Contact Me",
+    notloaded: true,
+    speed: 100,
+  },
+  {
+    elementTag: "h2.SectionHeading.ATP",
+    text: "About This Page",
+    notloaded: true,
+    speed: 100,
+  },
+  {
+    elementTag: "p.DQuote1",
+    text: '"Design is not just what it looks like and feels like.',
+    notloaded: true,
+    speed: 50,
+  },
+  {
+    elementTag: "p.DQuote3",
+    text: 'Design is how it works."',
+    notloaded: true,
+    speed: 150,
+  },
+];
+
 $(async function () {
+  var helloElement = $("h1.hello");
+  helloElement.html("");
+  typeSentence("Hi, im Yuvraj Bajwa", helloElement);
   carousel(carouselText, "#feature-text");
 });
 
@@ -24,7 +90,6 @@ async function typeSentence(sentence, eleRef, delay = 100) {
 async function deleteSentence(eleRef) {
   const sentence = $(eleRef).html();
   const letters = sentence.split("");
-  let i = 0;
   while (letters.length > 0) {
     await waitForMs(100);
     letters.pop();
@@ -54,3 +119,31 @@ function updateFontColor(eleRef, color) {
 function waitForMs(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
+
+$.fn.isInViewport = function () {
+  var elementTop = $(this).offset().top;
+  var elementBottom = elementTop + $(this).outerHeight();
+
+  var viewportTop = $(window).scrollTop();
+  var viewportBottom = viewportTop + $(window).height();
+
+  return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
+var typingTitleLoadCount = 0;
+$(window).on("resize scroll", function () {
+  if (typingTitleLoadCount < typingTitleText.length) {
+    typingTitleText.forEach((element) => {
+      if (element.notloaded) {
+        if ($(element.elementTag).isInViewport()) {
+          $(element.elementTag).html("");
+          typeSentence(element.text, $(element.elementTag), element.speed);
+          element.notloaded = !element.notloaded;
+          typingTitleLoadCount++;
+        }
+      }
+    });
+  } else {
+    $(window).off("resize scroll");
+  }
+});
