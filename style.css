@@ -1,12 +1,14 @@
-@import url("https://use.typekit.net/jmk3xov.css");
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
+* {
+  margin: 0;
+}
 canvas {
   position: fixed;
   top: 0;
   left: 0;
-}
-body {
-  margin: 0 0;
 }
 :root {
   --dark-bg: rgba(15, 15, 15, 0.5);
@@ -128,8 +130,8 @@ blockquote p {
 }
 .typingText {
   display: inline;
-  background-color: var(--light-bg);
   padding: 5px;
+  height: 100px;
 }
 .typingText p,
 .typingText span {
@@ -246,8 +248,4 @@ h5 {
   .abPage {
     grid-column: 2 / 12;
   }
-  /*  :root {
-    --dark-bg: rgba(0, 0, 0, 0.5);
-    --light-bg: rgba(255, 255, 255, 0.65);
-  } */
 }

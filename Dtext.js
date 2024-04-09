@@ -1,9 +1,14 @@
 import $ from "jquery";
 
 const carouselText = [
-  { text: "User Experiences.", color: "#ff6347" },
+  { text: "User Experiences.", color: "#FF6347" },
   { text: "User Interfaces.", color: "#FFBF47" },
   { text: "Web apps.", color: "#FF4787" },
+  { text: "Mobile apps.", color: "#FF47B2" },
+  { text: "Websites.", color: "#47C2FF" },
+  { text: "Prototypes.", color: "#47E6FF" },
+  { text: "Animations.", color: "#47FFC2" },
+  { text: "Front ends.", color: "#FF47E6" },
 ];
 
 const typingTitleText = [
